@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        html {
+            margin: 0px;
+            width: 100%;
+        }
+        body {
+            margin: 0px;
+            width: 100%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;   
+            align-items: center;
+        }
+        table, tr, td, th {
+            border: solid 1px black;
+            text-align: center;
+        }
+        td, th {
+            width: 70px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <table>
+                <tr>
+                    <th>Check</th>
+                    <th>To Do</th>
+                    <th>Delete</th>
+                </tr>
+                <tr id="linha1">
+                    <td><input type="checkbox" name="check1" id="check1" onclick="mostra()"></td>
+                    <td id="1">1</td>
+                    <td><button>Delete</button></td>
+                </tr>
+                <tr id="linha2">
+                    <td><input type="checkbox" name="check1" id="check1" onclick="mostra()"></td>
+                    <td id="1">2</td>
+                    <td><button>Delete</button></td>
+                </tr>
+                <tr id="linha3">
+                    <td><input type="checkbox" name="check1" id="check1" onclick="mostra()"></td>
+                    <td id="1">3</td>
+                    <td><button onclick="deletar()">Delete</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="box2">
+            <h2>Evento</h2>
+            <input type="button" onclick="mostra()" value="AQUI!">
+        </div>
+    </div>
+
+<script>
+    let cor = document.getElementById("linha1")
+    let check = document.getElementById("check1")
+    let td = document.getElementById("linha3")
+    function mostra() {
+        check.checked?console.log("SIM!"):console.log("NÃO!")
+    }
+    function deletar() {
+        td.innerHTML= ""
+    }
+</script>
+</body>
+</html>
